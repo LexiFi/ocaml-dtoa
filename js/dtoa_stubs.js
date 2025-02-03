@@ -6,21 +6,21 @@
  */
 
 //Provides: flow_shortest_string_of_float const
-//Requires: caml_js_from_float, caml_new_string
+//Requires: caml_js_from_float, caml_string_of_jsbytes
 function flow_shortest_string_of_float(num) {
   // TODO: shorten string (drop +, leading 0, shift ., etc)
-  return caml_new_string(caml_js_from_float(num).toString());
+  return caml_string_of_jsbytes(caml_js_from_float(num).toString());
 }
 
 //Provides: flow_ecma_string_of_float const
-//Requires: caml_js_from_float, caml_new_string
+//Requires: caml_js_from_float, caml_string_of_jsbytes
 function flow_ecma_string_of_float(num) {
-  return caml_new_string(caml_js_from_float(num).toString());
+  return caml_string_of_jsbytes(caml_js_from_float(num).toString());
 }
 
 //Provides: flow_g_fmt const
-//Requires: caml_js_from_float, caml_new_string
+//Requires: caml_js_from_float, caml_string_of_jsbytes
 function flow_g_fmt(num) {
   // TODO: shorten string
-  return caml_new_string(caml_js_from_float(num).toString());
+  return caml_string_of_jsbytes(caml_js_from_float(num).toString());
 }
